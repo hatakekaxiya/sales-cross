@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'Zen Kaku Gothic Antique';
+  src: url('../fonts/ZenKakuGothicAntique-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Zen Kaku Gothic Antique';
+  src: url('../fonts/ZenKakuGothicAntique-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Zen Kaku Gothic Antique';
+  src: url('../fonts/ZenKakuGothicAntique-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Zen Kaku Gothic Antique';
+  src: url('../fonts/ZenKakuGothicAntique-Medium.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Zen Kaku Gothic Antique';
+  src: url('../fonts/ZenKakuGothicAntique-Medium.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Zen Kaku Gothic Antique';
+  src: url('../fonts/ZenKakuGothicAntique-Bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Zen Kaku Gothic Antique';
+  src: url('../fonts/ZenKakuGothicAntique-Black.ttf');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'MPLUS1';
+  src: url('../fonts/MPLUS1-VariableFont_wght.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'MPLUS1';
+  src: url('../fonts/MPLUS1-VariableFont_wght.ttf');
+  font-weight: bold;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+html {
+ font-family: 'Zen Kaku Gothic Antique';
+}
+
+._bold {
+  font-weight: 700;
+}
+
+.u-font-en{
+ font-family: 'MPLUS1';
+}
+
+//文字縦書き
+@mixin vertical {
+  writing-mode: horizontal-tb;
+  white-space: nowrap;
+  transform: rotate(90deg);
+}

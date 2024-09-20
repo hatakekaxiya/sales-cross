@@ -1,0 +1,176 @@
+.js-io {
+
+ &._fadeup {
+   transform: translate(0, 36px);
+   transition: transform 1.2s cubic-bezier(0.32, 0.1, 0, 1),opacity 1.2s cubic-bezier(0.32, 0.1, 0, 1), background 1.2s cubic-bezier(0.32, 0.1, 0, 1);
+   visibility: hidden;
+   opacity: 0;
+   filter: blur(10px);
+ }
+
+ &._fadeleft {
+  transform: translateX(100px) scale(1.1);
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+  filter: blur(10px);
+  opacity: 0;
+  @include pc {
+    transform: translateX(100rem) scale(1.1);
+  }
+  @include sp {
+    transform: translateX(50rem) scale(1.1);
+  }
+ }
+
+ &._blur {
+   transform: scale(1.1);
+   transition: all 1s ease-in-out;
+   visibility: hidden;
+   filter: blur(10px);
+   opacity: 0;
+ }
+
+ &._fadein {
+   transform: translateY(0);
+   transition: all 1s ease-in-out;
+   visibility: hidden;
+   opacity: 0;
+ }
+
+ &._zoomup {
+   transform: scale(0.5);
+   transition: all 1s ease-in-out;
+   visibility: hidden;
+   opacity: 0;
+   transition-timing-function: cubic-bezier(1.000, -0.195, 0.000, 1.330);
+ }
+
+ // 要素が表示された際に透明度と可視性を変更
+ &._show {
+   transform: translate(0) scale(1);
+   visibility: visible; // 表示された際に可視化
+   filter: blur(0);
+   opacity: 1;
+ }
+
+ //delay
+ &._delay {
+  //  opacity: 0;
+  //  transition: transform 1.2s cubic-bezier(0.32, 0.1, 0, 1),opacity 1.2s cubic-bezier(0.32, 0.1, 0, 1);
+  //  transform: translateY(36rem);
+   &.--fadein{
+    transform: translateY(0);
+   }
+   //エフェクト
+   &._show {
+    transform: translate(0) scale(1);
+    visibility: visible; // 表示された際に可視化
+    filter: blur(0);
+    opacity: 1;
+
+     &:nth-of-type(1) {
+       transition-delay: 0s;
+     }
+     &:nth-of-type(2) {
+       transition-delay: 0.1s;
+     }
+     &:nth-of-type(3) {
+       transition-delay: 0.18s;
+     }
+     &:nth-of-type(4) {
+       transition-delay: 0.26s;
+     }
+     &:nth-of-type(5) {
+       transition-delay: 0.34s;
+     }
+     &:nth-of-type(6) {
+       transition-delay: 0.42s;
+     }
+     &:nth-of-type(7) {
+      transition-delay: 0.5s;
+     }
+     &:nth-of-type(8) {
+       transition-delay: 0.58s;
+     }
+     &:nth-of-type(9) {
+       transition-delay: 0.66s;
+     }
+     &:nth-of-type(10) {
+      transition-delay: 0.74s;
+    }
+  }
+}
+
+&._delay-after {
+   &._show {
+    transform: translate(0) scale(1);
+    visibility: visible; // 表示された際に可視化
+    filter: blur(0);
+    opacity: 1;
+
+    &:nth-of-type(1) {
+      transition-delay: 0.05s;
+    }
+    &:nth-of-type(2) {
+      transition-delay: 0.01s;
+    }
+     &:nth-of-type(3) {
+      transition-delay: 0.15s;
+    }
+  }
+}
+
+  &._delay-elem {
+    transition-delay: 1s;
+  }
+  &._delay-elem2 {
+    transition-delay: 2s;
+  }
+}
+
+.js-menu .c-menu {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  span {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    color: inherit;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: inherit;
+      content: attr(data-text);
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+  }
+}
+
+._fvzoomup {
+  transform: scale(0.5);
+  transition: all 1s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  transition-timing-function: cubic-bezier(1.000, -0.195, 0.000, 1.330);
+  &._show {
+    transform: translate(0) scale(1);
+    visibility: visible; // 表示された際に可視化
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+._fvdelay1 {
+  transition-delay: 0.1s;
+}
+
+._fvdelay2 {
+  transition-delay: 0.2s;
+}
+
+._fvdelay3 {
+  transition-delay: 0.3s;
+}

@@ -1,0 +1,308 @@
+.main {
+  .sec-fv {
+    background: url(../img/fv-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top;
+    padding-top: 280px;
+    @include pc {
+      padding-top: 280rem;
+    }
+    @include sp {
+      padding-top: 125rem;
+    }
+    .l-container {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      padding-bottom: 171px;
+      @include pc {
+        padding-bottom: 171rem;
+      }
+      @include sp {
+        flex-direction: column;
+        align-items: normal;
+      }
+    }
+    &-ttl {
+      h2 {
+        position: relative;
+        font-size: 100px;
+        letter-spacing: 0.1em;
+        line-height: 1.2;
+        font-weight: 500;
+        color: var(--g-color-black);
+        margin-bottom: 55px;
+        @include pc {
+          margin-bottom: 55rem;
+          font-size: 100rem;
+        }
+        @include sp {
+          font-size: 32rem;
+          margin-bottom: 23rem;
+        }
+        span {
+          position: absolute;
+          top: 33px;
+          right: 165px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include pc {
+            top: 33rem;
+            right: 165rem;
+          }
+          @include sp {
+            top: 10rem;
+            right: 138rem;
+          }
+          svg {
+            width: 25px;
+            height: 74px;
+            @include pc {
+              width: 25rem;
+              height: 74rem;
+            }
+            @include sp {
+              width: 8rem;
+              height: 24rem;
+            }
+          }
+        }
+      }
+      & > span {
+        font-family: $font-noto;
+        font-size: 24px;
+        letter-spacing: 0.1em;
+        color: var(--g-color-black);
+        font-weight: 400;
+        display: block;
+        @include pc {
+          font-size: 24rem;
+        }
+        @include sp {
+          font-size: 16rem;
+          margin-bottom: 46rem;
+        }
+      }
+    }
+
+    &-txt {
+      ul {
+        text-align: right;
+        li {
+          font-size: 24px;
+          letter-spacing: 0.1em;
+          font-weight: 400;
+          color: var(--g-color-red);
+          line-height: 2;
+          @include pc {
+            font-size: 24rem;
+          }
+          @include sp {
+            font-size: 12rem;
+          }
+        }
+      }
+    }
+  }
+
+  .sec-job {
+    padding-top: 120px;
+    @include pc {
+      padding-top: 120rem;
+    }
+    @include sp {
+      padding-top: 80rem;
+    }
+    &-ttl {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      margin-bottom: 65px;
+      @include pc {
+        margin-bottom: 65rem;
+      }
+      @include sp {
+        margin-bottom: 40rem;
+      }
+      .a-btn {
+        display: block;
+        @include sp {
+          display: none;
+        }
+      }
+    }
+    &-content {
+      .job-items {
+        @include sp {
+          margin-bottom: 50rem;
+        }
+      }
+      .a-btn {
+        display: none;
+        @include sp {
+          text-align: center;
+          display: block;
+        }
+        a {
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  .sec-partner {
+    background: var(--g-color-black);
+    padding: 440px 0 410px;
+    @include pc {
+      padding: 440rem 0 410rem;
+    }
+    @include sp {
+      padding: 270rem 0;
+    }
+    &-ttl {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 120px;
+      @include pc {
+        margin-bottom: 120rem;
+      }
+      @include sp {
+        margin-bottom: 30rem;
+      }
+      h2,
+      span {
+        color: var(--g-color-white);
+      }
+      .a-btn {
+        a {
+          background: var(--g-color-red);
+        }
+      }
+    }
+    &-content {
+      .partner-items {
+        .swiper-button-list {
+          margin-bottom: 44px;
+          display: flex;
+          align-items: center;
+          justify-content: right;
+          @include pc {
+            margin-bottom: 44rem;
+          }
+          @include sp {
+            margin-bottom: 25rem;
+          }
+          .swiper-button-prev,
+          .swiper-button-next {
+            position: unset;
+            top: unset;
+            width: unset;
+            height: unset;
+            margin-top: unset;
+            &::after {
+              display: none !important;
+            }
+            svg {
+              width: 32px;
+              height: 32px;
+              @include pc {
+                width: 32rem;
+                height: 32rem;
+              }
+              @include sp {
+                width: 28rem;
+                height: 28rem;
+              }
+            }
+          }
+          .swiper-button-next {
+            margin-left: 12px;
+            @include pc {
+              margin-left: 12rem;
+            }
+            @include sp {
+              margin-left: 8rem;
+            }
+          }
+        }
+        .swiper-pagination {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .sec-study {
+    padding: 80px 0 100px;
+    @include pc {
+      padding: 80rem 0 100rem;
+    }
+    &-ttl {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      .a-btn {
+        display: block;
+        @include sp {
+          text-align: center;
+          display: none;
+        }
+        a {
+          margin: auto;
+        }
+      }
+    }
+    &-sp-btn {
+      display: none;
+      @include sp {
+        display: block;
+      }
+      .a-btn {
+        text-align: center;
+        a {
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  .sec-news {
+    padding: 120px 0;
+    @include pc {
+      padding: 120rem 0;
+    }
+    .container {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      @include sp {
+        flex-direction: column;
+      }
+    }
+    &-ttl {
+      .sec-ttl {
+        margin-bottom: 73px;
+        @include pc {
+          margin-bottom: 73rem;
+        }
+        @include sp {
+          margin-bottom: 56rem;
+        }
+      }
+      .a-btn {
+        display: block;
+        @include sp {
+          display: none;
+        }
+      }
+    }
+    &-content {
+      @include sp {
+        width: 100%;
+      }
+    }
+  }
+}
