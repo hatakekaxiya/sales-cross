@@ -1,0 +1,449 @@
+.sec-about-page-content {
+  margin-bottom: 200px;
+  @include pc {
+    margin-bottom: 200rem;
+  }
+  @include tb {
+    margin-bottom: 80rem;
+  }
+}
+
+.sec-about__elem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #BCBCBC;
+  position: relative;
+  @include sp {
+    flex-direction: column;
+    align-items: start;
+    border-bottom: unset;
+    padding: 0 20rem;
+  }
+  &-name {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 100%;
+    @include sp {
+      width: 100%;box-sizing: content-box;
+      border-bottom: 1px solid #BCBCBC;
+    }
+    p {
+      border-bottom: 1px solid var(--g-color-red);
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--g-color-red);
+      letter-spacing: 0.1em;
+      @include pc {
+        font-size: 24rem;
+      }
+      @include tb {
+        font-size: 32rem;
+      }
+      @include sp {
+        transform: translateY(1px);
+        font-size: 16rem;
+      }
+    }
+  }
+  &-detail {
+    width: 944px;
+    padding: 50px 0;
+    @include pc {
+      padding: 50rem 0;
+      width: 944rem;
+    }
+    @include tb {
+      width: 1100rem;
+    }
+    @include sp {
+      padding: 28rem 0;
+      width: 100%;
+    }
+    p {
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      color: #575757;
+      @include pc {
+        font-size: 14rem;
+      }
+      @include tb {
+        font-size: 24rem;
+      }
+      @include sp {
+        font-size: 12rem;
+      }
+      span {
+        font-size: 24px;
+        letter-spacing: 0.1em;
+        display: block;
+        margin-bottom: 15px;
+        transform: translateX(-10px);
+        @include pc {
+          font-size: 24rem;
+          margin-bottom: 15rem;
+          transform: translateX(-10rem);
+        }
+        @include tb {
+          font-size: 36rem;
+        }
+        @include sp {
+          font-size: 20rem;
+          margin-bottom: 21rem;
+          transform: translateX(-10rem);
+        }
+      }
+    }
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        @include sp {
+          flex-direction: column;
+          align-items: start;
+        }
+        &:not(:last-child) {
+          margin-bottom: 30px;
+          @include pc {
+            margin-bottom: 30rem;
+          }
+          @include sp {
+            margin-bottom: 20rem;
+          }
+        }
+        span {
+          display: block;
+          font-size: 16px;
+          letter-spacing: 0.1em;
+          line-height: 2;
+          color: #575757;
+          @include pc {
+            font-size: 16rem;
+          }
+          @include tb {
+            font-size: 26rem;
+          }
+          @include sp {
+            font-size: 14rem;
+          }
+          &:nth-child(1) {
+            width: 170px;
+            @include pc {
+              width: 170rem;
+            }
+            @include sp {
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  &:nth-child(1) {
+    .sec-about__elem-detail {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      svg {
+        width: 288px;
+        height: 31px;
+        @include pc {
+          width: 288rem;
+          height: 31rem;
+        }
+        @include tb {
+          width: 350rem;
+          height: 50rem;
+        }
+        @include sp {
+          width: 193rem;
+          height: 21rem;
+        }
+      }
+      span {
+        font-family: $font-noto;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        color: var(--g-color-black);
+        @include pc {
+          font-size: 16rem;
+        }
+        @include tb {
+          font-size: 26rem;
+        }
+        @include sp {
+          font-size: 10rem;
+        }
+      }
+    }
+  }
+}
+
+.sec-about-page-member {
+  padding: 180px 0;
+  background: #000;
+  @include pc {
+    padding: 120rem 0;
+  }
+  @include sp {
+    padding: 80rem 0;
+  }
+  .sec-ttl {
+    margin-bottom: 108px;
+    @include pc {
+      margin-bottom: 108rem;
+    }
+    @include sp {
+      margin-bottom: 52rem;
+    }
+  }
+
+  .about-member__elem {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    @include sp {
+      flex-direction: column;
+      align-items: start;
+      padding: 0 20rem;
+    }
+    &:not(:last-child) {
+      margin-bottom: 160px;
+      @include pc {
+        margin-bottom: 160rem;
+      }
+      @include sp {
+        margin-bottom: 80rem;
+      }
+    }
+    &-img {
+      width: 26%;
+      overflow: hidden;
+      height: 490px;
+      border-radius: 8px;
+      @include pc {
+        height: 490rem;
+        border-radius: 8rem;
+      }
+      @include tb {
+        height: 700rem;
+        width: 40%;
+      }
+      @include sp {
+        height: 310rem;
+        width: 100%;
+        margin-bottom: 28rem;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-content {
+      width: 74%;
+      padding-left: 80px;
+      @include pc {
+        padding-left: 80rem;
+      }
+      @include tb {
+        width: 60%;
+      }
+      @include sp {
+        padding-left: 0;
+        width: 100%;
+      }
+    }
+    &-head {
+      margin-bottom: 20px;
+      @include pc {
+        margin-bottom: 20rem;
+      }
+      @include sp {
+        margin-bottom: 30rem;
+      }
+      &-ico {
+        span {
+          display: block;
+          color: var(--g-color-red);
+          margin-bottom: 10px;
+          font-size: 20px;
+          line-height: 1;
+          letter-spacing: 0.1em;
+          font-weight: 500;
+          @include pc {
+            margin-bottom: 10rem;
+            font-size: 20rem;
+          }
+          @include tb {
+            margin-bottom: 15rem;
+            font-size: 30rem;
+          }
+          @include sp {
+            margin-bottom: 8rem;
+            font-size: 16rem;
+          }
+        }
+      }
+      &-ttl {
+        p {
+          font-size: 40px;
+          color: var(--g-color-white);
+          font-weight: 500;
+          letter-spacing: 0.1em;
+          line-height: 1;
+          @include pc {
+            font-size: 40rem;
+          }
+          @include tb {
+            font-size: 50rem;
+          }
+          @include sp {
+            font-size: 24rem;
+          }
+        }
+      }
+    }
+    &-career {
+      margin-bottom: 10px;
+      @include pc {
+        margin-bottom: 10rem;
+      }
+      &-ttl {
+        margin-bottom: 12px;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--g-color-red);
+        @include pc {
+          font-size: 20rem;
+          margin-bottom: 12rem;
+        }
+        @include tb {
+          font-size: 30rem;
+          margin-bottom: 12rem;
+        }
+        @include sp {
+          font-size: 16rem;
+          margin-bottom: 12rem;
+        }
+      }
+      ul {
+        position: relative;
+        &:after {
+          content: '';
+          width: 1px;
+          height: 140px;
+          left: 6px;
+          top: 8px;
+          background: var(--g-color-red);
+          position: absolute;
+          z-index: 3;
+          transform: translateX(-50%);
+          @include pc {
+            height: 140rem;
+            left: 6rem;
+            top: 8rem;
+          }
+          @include tb {
+            height: 200rem;
+            left: 11rem;
+            top: 15rem;
+          }
+          @include sp {
+            height: 120rem;
+          }
+        }
+        li {
+          position: relative;
+          font-size: 14px;
+          margin-bottom: 20px;
+          color: var(--g-color-white);
+          padding-left: 20px;
+          z-index: 5;
+          @include pc {
+            padding-left: 20rem;
+            margin-bottom: 20rem;
+            font-size: 14rem;
+          }
+          @include tb {
+            padding-left: 40rem;
+            margin-bottom: 20rem;
+            font-size: 24rem;
+          }
+          @include sp {
+            font-size: 12rem;
+            margin-bottom: 18rem;
+          }
+          &:after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            left: 0;
+            border: 1px solid var(--g-color-red);
+            background: var(--g-color-black);
+            border-radius: 50%;
+            top: 7px;
+            @include pc {
+              width: 12rem;
+              height: 12rem;
+              top: 7rem;
+            }
+            @include tb {
+              width: 22rem;
+              height: 22rem;
+              top: 12rem;
+            }
+            @include sp {
+              width: 12rem;
+              height: 12rem;
+              top: 5rem;
+            }
+          }
+          &:last-child {
+            &::after {
+              background: var(--g-color-red);
+            }
+          }
+        }
+      }
+    }
+    &-about {
+      p {
+        font-size: 14px;
+        color: var(--g-color-white);
+        line-height: 1.7;
+        letter-spacing: 0.05em;
+        @include pc {
+          font-size: 14rem;
+        }
+        @include tb {
+          font-size: 24rem;
+        }
+        @include sp {
+          font-size: 12rem;
+        }
+        &.about-member__elem-about-ttl {
+          margin-bottom: 12px;
+          font-size: 20px;
+          font-weight: bold;
+          color: var(--g-color-red);
+          @include pc {
+            font-size: 20rem;
+            margin-bottom: 12rem;
+          }
+          @include tb {
+            font-size: 30rem;
+          }
+          @include sp {
+            font-size: 16rem;
+            margin-bottom: 25rem;
+          }
+        }
+      }
+    }
+  }
+}

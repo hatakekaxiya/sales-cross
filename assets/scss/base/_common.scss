@@ -19,7 +19,7 @@ html {
   scroll-behavior: smooth;
 
   @include pc {
-   font-size: calc(1/1300 * 100vw);
+   font-size: calc(1/1600 * 100vw);
   }
   @include sp {
    font-size: calc(1 * 100vw / 390);
@@ -181,39 +181,6 @@ body.mac-os{
  }
 }
 
-.sec-ttl {
-  overflow: hidden;
-  text-align: center;
-  p {
-    font-size: 24px;
-    font-family: $font-m;
-    letter-spacing: 0.2em;
-    margin-bottom: 32px;
-    color: var(--g-color-brown);
-    @include pc {
-      font-size: 24rem;
-      margin-bottom: 32rem;
-    }
-    @include sp {
-      font-size: 20rem;
-      margin-bottom: 24rem;
-    }
-  }
-  h2 {
-    font-size: 32px;
-    letter-spacing: 0.1em;
-    font-weight: 400;
-    line-height: 1.5;
-    color: var(--g-color-black);
-    @include pc {
-      font-size: 32rem;
-    }
-    @include sp {
-      font-size: 24rem;
-    }
-  }
-}
-
 section{
  position: relative;
 }
@@ -225,6 +192,9 @@ section{
   @include pc {
     max-width: 1296rem;
   }
+  @include tb {
+    max-width: 90%;
+  }
   @include sp {
     max-width: 340rem;
   }
@@ -235,7 +205,7 @@ section{
   width: 100%;
   margin: auto;
   @include pc {
-    max-width: 1536rem;
+    max-width: 90%;
   }
   @include sp {
     max-width: 310rem;
@@ -258,6 +228,9 @@ section{
   padding: 320px 0 120px;
   @include pc {
     padding: 320rem 0 120rem;
+  }
+  @include sp {
+    padding: 175rem 0 59rem;
   }
 }
 
@@ -288,6 +261,10 @@ section{
       margin-bottom: 5rem;
       font-size: 56rem;
     }
+    @include tb {
+      margin-bottom: 5rem;
+      font-size: 80rem;
+    }
     @include sp {
        font-size: 40rem;
     }
@@ -304,6 +281,10 @@ section{
     @include pc {
       font-size: 16rem;
       padding-left: 16rem;
+    }
+    @include tb {
+      font-size: 26rem;
+      padding-left: 26rem;
     }
     @include sp {
       font-size: 12rem;
@@ -322,6 +303,20 @@ section{
         width: 8rem;
         height: 8rem;
       }
+      @include tb {
+        width: 16rem;
+        height: 16rem;
+      }
+      @include sp {
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+  }
+  &._white {
+    h2,
+    span {
+      color: var(--g-color-white);
     }
   }
 }
@@ -338,6 +333,10 @@ section{
     @include pc {
       margin-bottom: 15rem;
       font-size: 64rem;
+    }
+    @include tb {
+      margin-bottom: 15rem;
+      font-size: 80rem;
     }
     @include sp {
        font-size: 40rem;
@@ -356,6 +355,10 @@ section{
       font-size: 16rem;
       padding-left: 16rem;
     }
+    @include tb {
+      font-size: 26rem;
+      padding-left: 26rem;
+    }
     @include sp {
       font-size: 12rem;
     }
@@ -370,6 +373,14 @@ section{
       top: 50%;
       transform: translateY(-50%);
       @include pc {
+        width: 8rem;
+        height: 8rem;
+      }
+      @include tb {
+        width: 16rem;
+        height: 16rem;
+      }
+      @include sp {
         width: 8rem;
         height: 8rem;
       }
@@ -405,6 +416,12 @@ section{
       height: 64rem;
       font-size: 16rem;
     }
+    @include tb {
+      padding-left: 50rem;
+      width: 430rem;
+      height: 84rem;
+      font-size: 26rem;
+    }
     @include sp {
       padding-left: 30rem;
       width: 240rem;
@@ -426,6 +443,11 @@ section{
       @include pc {
         width: 32rem;
         height: 32rem;
+        right: 24rem;
+      }
+      @include tb {
+        width: 46rem;
+        height: 46rem;
         right: 24rem;
       }
       @include sp {
@@ -470,6 +492,10 @@ section{
       height: 201rem;
       border-radius: 10rem;
       margin-bottom: 30rem;
+    }
+    @include tb {
+      width: 49%;
+      height: 260rem;
     }
     @include sp {
       width: 100%;
@@ -517,7 +543,11 @@ section{
             margin-bottom: 8rem;
             font-size: 18rem;
           }
-          @include pc {
+          @include tb {
+            margin-bottom: 15rem;
+            font-size: 26rem;
+          }
+          @include sp {
             font-size: 14rem;
             margin-bottom: 15rem;
           }
@@ -534,6 +564,10 @@ section{
             font-size: 12rem;
             margin-bottom: 10rem;
           }
+          @include tb {
+            font-size: 20rem;
+            margin-bottom: 20rem;
+          }
           @include sp {
             font-size: 10rem;
             margin-bottom: 12rem;
@@ -547,6 +581,9 @@ section{
         margin-bottom: 16px;
         @include pc {
           margin-bottom: 16rem;
+        }
+        @include tb {
+          margin-bottom: 20rem;
         }
         @include sp {
           display: block;
@@ -571,6 +608,10 @@ section{
               width: 17rem;
               margin-right: 6rem;
             }
+            @include tb {
+              width: 30rem;
+              margin-right: 12rem;
+            }
             @include sp {
               width: 17rem;
               margin-right: 8rem;
@@ -582,6 +623,12 @@ section{
             color: var(--g-color-black);
             font-weight: 500;
             @include pc {
+              font-size: 12rem;
+            }
+            @include tb {
+              font-size: 20rem;
+            }
+            @include sp {
               font-size: 12rem;
             }
           }
@@ -605,6 +652,10 @@ section{
               width: 20rem;
               margin-right: 6rem;
             }
+            @include tb {
+              width: 36rem;
+              margin-right: 8rem;
+            }
             @include sp {
               width: 22rem;
               margin-right: 7rem;
@@ -616,6 +667,12 @@ section{
             color: var(--g-color-black);
             font-weight: 500;
             @include pc {
+              font-size: 12rem;
+            }
+            @include tb {
+              font-size: 20rem;
+            }
+            @include sp {
               font-size: 12rem;
             }
           }
@@ -631,6 +688,9 @@ section{
           line-height: 1;
           @include pc {
             font-size: 14rem;
+          }
+          @include tb {
+            font-size: 18rem;
           }
           @include sp {
             font-size: 12rem;
@@ -657,6 +717,12 @@ section{
           width: 45rem;
           height: 16rem;
         }
+        @include tb {
+          font-size: 18rem;
+          width: 66rem;
+          height: 24rem;
+          right: 20rem;
+        }
         @include sp {
           width: 50rem;
           height: 19rem;
@@ -673,6 +739,10 @@ section{
       overflow: hidden;
       @include pc {
         width: 120rem;
+        border-radius: 10rem;
+      }
+      @include tb {
+        width: 180rem;
         border-radius: 10rem;
       }
       @include sp {
@@ -703,6 +773,10 @@ section{
     width: 1296rem;
     padding: 80rem 90rem 90rem 100rem;
   }
+  @include tb {
+    width: 90%;
+    padding: 80rem 90rem 90rem 100rem;
+  }
   @include sp {
     flex-direction: column;
     width: 350rem;
@@ -720,6 +794,9 @@ section{
         font-size: 56rem;
         margin-bottom: 15rem;
       }
+      @include tb {
+        margin-bottom: 25rem;
+      }
       @include sp {
         font-size: 40rem;
         margin-bottom: 23rem;
@@ -736,6 +813,9 @@ section{
       font-family: $font-noto;
       @include pc {
         font-size: 16rem;
+      }
+      @include tb {
+        font-size: 22rem;
       }
       @include sp {
         text-align: center;
@@ -791,6 +871,9 @@ section{
       @include pc {
         height: 104rem;
       }
+      @include tb {
+        height: 146rem;
+      }
       @include sp {
         flex-direction: column;
         padding: 20rem;
@@ -814,6 +897,11 @@ section{
           height: 32rem;
           right: 21rem;
         }
+        @include tb {
+          width: 46rem;
+          height: 46rem;
+          right: 30rem;
+        }
         @include sp {
           width: 28rem;
           height: 28rem;
@@ -830,6 +918,10 @@ section{
           margin-right: 59rem;
           font-size: 11rem;
         }
+        @include tb {
+          margin-right: 59rem;
+          font-size: 18rem;
+        }
         @include sp {
           font-size: 10rem;
           margin-right: 0;
@@ -845,6 +937,10 @@ section{
         max-width: 550px;
         @include pc {
           font-size: 16rem;
+          max-width: 550rem;
+        }
+        @include tb {
+          font-size: 22rem;
           max-width: 550rem;
         }
         @include sp {
@@ -888,8 +984,8 @@ section{
           right: 331rem;
         }
         @include sp {
-          top: 8rem;
-          right: 125rem;
+          top: 14rem;
+          right: 129rem;
         }
         svg {
           width: 34px;
@@ -922,6 +1018,10 @@ section{
         font-size: 16rem;
         margin-bottom: 139rem;
       }
+      @include tb {
+        max-width: 800rem;
+        font-size: 24rem;
+      }
       @include sp {
         max-width: 100%;
         margin-bottom: 55rem;
@@ -944,6 +1044,9 @@ section{
       @include pc {
         width: 941rem;
       }
+      @include tb {
+        width: 86%;
+      }
       @include sp {
         width: 100%;
       }
@@ -964,6 +1067,9 @@ section{
   width: 348px;
   @include pc {
     width: 348rem;
+  }
+  @include tb {
+    width: 420rem;
   }
   @include sp {
     width: 241rem;
@@ -1015,6 +1121,11 @@ section{
         margin-bottom: 5rem;
         font-size: 14rem;
       }
+      @include tb {
+        padding: 4rem 50rem;
+        margin-bottom: 10rem;
+        font-size: 20rem;
+      }
       @include sp {
         padding: 3rem 37rem;
         margin-bottom: 8rem;
@@ -1035,7 +1146,12 @@ section{
         margin-bottom: 8rem;
         font-size: 22rem;
       }
+      @include tb {
+        margin-bottom: 12rem;
+        font-size: 32rem;
+      }
       @include sp {
+        margin-bottom: 8rem;
         font-size: 14rem;
       }
     }
@@ -1052,6 +1168,10 @@ section{
       @include pc {
         margin-bottom: 16rem;
         font-size: 14rem;
+      }
+      @include tb {
+        margin-bottom: 16rem;
+        font-size: 24rem;
       }
       @include sp {
         margin-bottom: 8rem;
@@ -1075,10 +1195,18 @@ section{
         font-family: $font-noto;
         line-height: 1;
         color: var(--g-color-border);
+        margin-bottom: 8px;
         @include pc {
+          margin-bottom: 8rem;
           padding: 2rem 30rem;
+          font-size: 12rem;
+        }
+        @include tb {
+          padding: 2rem 30rem;
+          font-size: 22rem;
         }
         @include sp {
+          font-size: 10rem;
           padding: 1rem 20rem;
         }
         &:not(:last-child) {
@@ -1337,6 +1465,155 @@ section{
         font-size: 20rem;
         margin-bottom: 12rem;
       }
+    }
+  }
+}
+
+.privacy-page-content {
+  padding-bottom: 180px;
+  @include pc {
+    padding-bottom: 180rem;
+  }
+  &-ttl {
+    &:not(:first-child) {
+      margin-top: 100px;
+      @include pc {
+        margin-top: 100rem;
+      }
+    }
+    p {
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      margin-bottom: 50px;
+      @include pc {
+        font-size: 26rem;
+        margin-bottom: 50rem;
+      }
+      @include tb {
+        font-size: 36rem;
+        margin-bottom: 50rem;
+      }
+      @include sp {
+        font-size: 20rem;
+        margin-bottom: 30rem;
+      }
+    }
+  }
+  &-txt {
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      line-height: 2;
+      @include pc {
+        font-size: 16rem;
+      }
+      @include tb {
+        font-size: 26rem;
+      }
+      @include sp {
+        font-size: 14rem;
+      }
+    }
+    & > p {
+      margin-bottom: 30px;
+      @include pc {
+        margin-bottom: 30rem;
+      }
+    }
+    .privacy__elem {
+      margin-bottom: 30px;
+      @include pc {
+        margin-bottom: 30rem;
+      }
+    }
+  }
+  .privacy-page-footer-txt {
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      line-height: 2;
+      @include pc {
+        font-size: 16rem;
+      }
+      @include tb {
+        font-size: 26rem;
+      }
+      @include sp {
+        font-size: 14rem;
+      }
+    }
+  }
+  .privacy-tb {
+    margin-top: 50px;
+    @include pc {
+      margin-top: 50rem;
+    }
+    &:last-child {
+      margin-bottom: 50px;
+      @include pc {
+        margin-bottom: 50rem;
+      }
+    }
+    li {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      padding: 10px 0;
+      @include pc {
+        padding: 10rem 0;
+      }
+      span {
+        display: block;
+        font-size: 16px;
+        line-height: 1.7;
+        @include pc {
+          font-size: 16rem;
+        }
+        @include tb {
+          font-size: 26rem;
+        }
+        @include sp {
+          font-size: 14rem;
+        }
+        &:nth-child(1) {
+          width: 30%;
+        }
+        &:nth-child(2) {
+          width: 70%;
+          @include sp {
+            width: 65%;
+          }
+        }
+      }
+    }
+    &__ttl {
+      border-bottom: 1px solid var(--g-color-border);
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.news-page {
+  .l-container {
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    @include sp {
+      flex-direction: column;
+      max-width: 350rem;
+    }
+    .page-ttl {
+      @include sp {
+        margin-bottom: 80rem;
+      }
+    }
+    .news-items {
+      margin: auto;
     }
   }
 }

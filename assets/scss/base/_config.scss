@@ -14,7 +14,12 @@ $breakpoint: (
  }
 }
 @mixin pc{
- @media screen and (max-width: 1400px) {
+ @media screen and (max-width: 1600px) {
+  @content;
+ }
+}
+@mixin tb{
+ @media screen and (max-width: 1025px) {
   @content;
  }
 }

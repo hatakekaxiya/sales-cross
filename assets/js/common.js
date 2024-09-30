@@ -171,23 +171,23 @@ var case_swiper = new Swiper(".partner-swiper", {
   spaceBetween: 0,
   speed:500,
   breakpoints: {
-   768: {
-    slidesPerView: 'auto',
-    spaceBetween: 0,
-   },
-   1024:{
-    slidesPerView: 'auto',
-    spaceBetween: 0,
-   }
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+    },
+    1024:{
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+    }
   },
   navigation: {
-   nextEl: ".swiper-button-next",
-   prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   pagination: {
-   el: ".swiper-pagination",
+    el: ".swiper-pagination",
   }
- });
+});
 
 // menu hover 
 

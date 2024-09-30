@@ -22,6 +22,9 @@
       @include pc {
         width: 128rem;
       }
+      @include tb {
+        width: 165rem;
+      }
       @include sp {
         width: 64rem;
       }
@@ -111,6 +114,10 @@
     }
   }
   &-sp-menu {
+    display: none;
+    @include sp {
+      display: block;
+    }
     .sp-menu-btn {
       @include sp {
         display: flex;

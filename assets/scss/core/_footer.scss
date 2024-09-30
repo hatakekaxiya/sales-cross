@@ -27,6 +27,9 @@
       @include pc {
         border-radius: 16rem;
       }
+      @include tb {
+        width: 49%;
+      }
       @include sp {
         width: 100%;
       }
@@ -83,6 +86,10 @@
           padding: 68rem 46rem;
           width: 633rem;
         }
+        @include tb {
+          padding: 68rem 46rem;
+          width: 100%;
+        }
         @include sp {
           padding: 30rem 20rem;
           width: 100%;
@@ -104,6 +111,11 @@
             height: 62rem;
             right: 43rem;
           }
+          @include tb {
+            width: 80rem;
+            height: 80rem;
+            right: 50rem;
+          }
           @include sp {
             width: 28rem;
             height: 28rem;
@@ -120,6 +132,10 @@
             margin-bottom: 28rem;
             font-size: 24rem;
           }
+          @include tb {
+            margin-bottom: 28rem;
+            font-size: 38rem;
+          }
           @include sp {
             margin-bottom: 16rem;
             font-size: 16rem;
@@ -133,6 +149,9 @@
           letter-spacing: 0.1em;
           @include pc {
             font-size: 12rem;
+          }
+          @include tb {
+            font-size: 20rem;
           }
           @include sp {
             font-size: 10rem;
@@ -185,6 +204,10 @@
             font-size: 16rem;
             margin-bottom: 15rem;
           }
+          @include tb {
+            font-size: 30rem;
+            margin-bottom: 15rem;
+          }
         }
         ul {
           margin-bottom: 47px;
@@ -200,6 +223,9 @@
               @include pc {
                 margin-right: 54rem;
               }
+              @include tb {
+                margin-right: 40rem;
+              }
             }
             a {
               font-size: 16px;
@@ -208,6 +234,9 @@
               position: relative;
               @include pc {
                 font-size: 16rem;
+              }
+              @include tb {
+                font-size: 24rem;
               }
               &::after {
                 content: '';
@@ -238,6 +267,9 @@
           line-height: 1.7;
           @include pc {
             font-size: 12rem;
+          }
+          @include tb {
+            font-size: 20rem;
           }
           @include sp {
             font-size: 10rem;
@@ -300,6 +332,9 @@
         @include pc {
           font-size: 16rem;
         }
+        @include tb {
+          font-size: 24rem;
+        }
         @include sp {
           font-size: 12rem;
           text-align: center;
@@ -330,6 +365,9 @@
         color: var(--g-color-white);
         @include pc {
           font-size: 16rem;
+        }
+        @include tb {
+          font-size: 24rem;
         }
         @include sp {
           font-size: 10rem;

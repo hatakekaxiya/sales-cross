@@ -54,7 +54,7 @@
           }
           @include sp {
             top: 10rem;
-            right: 138rem;
+            right: 108rem;
           }
           svg {
             width: 25px;
@@ -80,6 +80,9 @@
         @include pc {
           font-size: 24rem;
         }
+        @include tb {
+          font-size: 30rem;
+        }
         @include sp {
           font-size: 16rem;
           margin-bottom: 46rem;
@@ -98,6 +101,9 @@
           line-height: 2;
           @include pc {
             font-size: 24rem;
+          }
+          @include tb {
+            font-size: 30rem;
           }
           @include sp {
             font-size: 12rem;
@@ -212,6 +218,10 @@
                 width: 32rem;
                 height: 32rem;
               }
+              @include tb {
+                width: 60rem;
+                height: 60rem;
+              }
               @include sp {
                 width: 28rem;
                 height: 28rem;
@@ -222,6 +232,9 @@
             margin-left: 12px;
             @include pc {
               margin-left: 12rem;
+            }
+            @include tb {
+              margin-left: 20rem;
             }
             @include sp {
               margin-left: 8rem;
