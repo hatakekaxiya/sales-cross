@@ -182,3 +182,95 @@
     padding-bottom: 120rem;
   }
 }
+
+.post-filter-form {
+  background: var(--g-color-white);
+  padding: 30px 35px;
+  margin-bottom: 170px;
+  @include pc {
+    padding: 30rem 35rem;
+  }
+  @include tb {
+    padding: 40rem 55rem;
+  }
+  @include sp {
+    padding: 25rem 20rem;
+  }
+  & > p {
+    font-size: 16px;
+    font-family: $font-noto;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--g-color-black);
+    margin-bottom: 24px;
+    @include pc {
+      font-size: 16rem;
+      margin-bottom: 24rem;
+    }
+    @include tb {
+      font-size: 26rem;
+    }
+    @include sp {
+      font-size: 12rem;
+      margin-bottom: 16rem;
+    }
+  }
+
+  &-main {
+    background: #EDEDED;
+    padding: 20px 25px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    @include pc {
+      gap: 40rem;
+      border-radius: 8rem;
+      padding: 20rem 25rem;
+    }
+    @include tb {
+      gap: 20rem;
+    }
+    @include sp {
+      display: block;
+      padding: 16rem;
+    }
+  }
+
+  &__elem {
+    &:not(:last-child) {
+      @include sp {
+        margin-bottom: 16rem;
+      }
+    }
+    p {
+      position: relative;
+      font-family: $font-noto;
+      letter-spacing: 0.1em;
+      font-size: 14px;
+      font-weight: bold;
+      color: var(--g-color-black);
+      margin-bottom: 8px;
+      @include pc {
+        font-size: 14rem;
+        margin-bottom: 8rem;
+      }
+      @include tb {
+        font-size: 24rem;
+      }
+      @include sp {
+        font-size: 12rem;
+      }
+      svg {
+        margin-right: 5px;
+      }
+    }
+    select {
+      width: 100%;
+      height: 36px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+  }
+}

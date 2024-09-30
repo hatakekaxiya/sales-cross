@@ -4436,6 +4436,118 @@ body.is-loading .js-cursor {
   }
 }
 
+.post-filter-form {
+  background: var(--g-color-white);
+  padding: 30px 35px;
+  margin-bottom: 170px;
+}
+@media screen and (max-width: 1600px) {
+  .post-filter-form {
+    padding: 30rem 35rem;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .post-filter-form {
+    padding: 40rem 55rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post-filter-form {
+    padding: 25rem 20rem;
+  }
+}
+.post-filter-form > p {
+  font-size: 16px;
+  font-family: "Noto Sans JP";
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: var(--g-color-black);
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 1600px) {
+  .post-filter-form > p {
+    font-size: 16rem;
+    margin-bottom: 24rem;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .post-filter-form > p {
+    font-size: 26rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post-filter-form > p {
+    font-size: 12rem;
+    margin-bottom: 16rem;
+  }
+}
+.post-filter-form-main {
+  background: #EDEDED;
+  padding: 20px 25px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+@media screen and (max-width: 1600px) {
+  .post-filter-form-main {
+    gap: 40rem;
+    border-radius: 8rem;
+    padding: 20rem 25rem;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .post-filter-form-main {
+    gap: 20rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post-filter-form-main {
+    display: block;
+    padding: 16rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post-filter-form__elem:not(:last-child) {
+    margin-bottom: 16rem;
+  }
+}
+.post-filter-form__elem p {
+  position: relative;
+  font-family: "Noto Sans JP";
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--g-color-black);
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 1600px) {
+  .post-filter-form__elem p {
+    font-size: 14rem;
+    margin-bottom: 8rem;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .post-filter-form__elem p {
+    font-size: 24rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post-filter-form__elem p {
+    font-size: 12rem;
+  }
+}
+.post-filter-form__elem p svg {
+  margin-right: 5px;
+}
+.post-filter-form__elem select {
+  width: 100%;
+  height: 36px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
 .main .sec-fv {
   background: url(../img/fv-bg.png);
   background-repeat: no-repeat;
