@@ -74,6 +74,9 @@ body {
   &.black-page {
     background-color: var(--g-color-black);
   }
+  &.white-page {
+    background-color: var(--g-color-white);
+  }
 }
 
 html.lenis {
@@ -185,6 +188,18 @@ section{
  position: relative;
 }
 
+.s-container {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  @include tb {
+    max-width: 90%;
+  }
+  @include sp {
+    max-width: 350rem;
+  }
+}
+
 .container {
   max-width: 1296px;
   width: 100%;
@@ -213,14 +228,17 @@ section{
 }
 
 .xl-container {
-  max-width: 1840px;
+  max-width: 1880px;
   width: 100%;
+  padding: 0 20px;
   margin: auto;
   @include pc {
     max-width: 1840rem;
+    padding: 0 20rem;
   }
   @include sp {
     max-width: 350rem;
+    padding: 0;
   }
 }
 
@@ -1072,7 +1090,7 @@ section{
     width: 420rem;
   }
   @include sp {
-    width: 241rem;
+    width: 241rem !important;
   }
   &:not(:last-child) {
     margin-right: 54px;

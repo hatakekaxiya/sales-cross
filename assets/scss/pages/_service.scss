@@ -5,6 +5,9 @@
   @include pc {
     padding: 170rem 0 150rem;
   }
+  @include sp {
+    padding: 80rem 0;
+  }
   h2 {
     position: relative;
     z-index: 1;
@@ -13,6 +16,13 @@
     letter-spacing: 0.1em;
     @include pc {
       font-size: 24rem;
+    }
+    @include tb {
+      font-size: 34rem;
+    }
+    @include sp {
+      font-size: 16rem;
+      margin-bottom: 60rem;
     }
   }
   &-img {
@@ -25,15 +35,34 @@
         height: 700rem;
         transform: translateY(-80rem);
       }
+      @include tb {
+        width: 1200rem;
+        height: 900rem;
+      }
+      @include sp {
+        width: 422rem;
+        height: 346rem;
+        transform: translateX(-36rem);
+      }
     }
   }
   p {
+    font-family: $font-noto;
     font-size: 16px;
     line-height: 2;
     color: var(--g-color-white);
     letter-spacing: 0.05em;
     @include pc {
       font-size: 16rem;
+    }
+    @include tb {
+      font-size: 26rem;
+      padding: 0 50rem;
+    }
+    @include sp {
+      padding: 0 20rem;
+      text-align: left;
+      font-size: 12rem;
     }
   }
 }
@@ -42,6 +71,29 @@
   padding: 200px 0;
   @include pc {
     padding: 200rem 0;
+  }
+  @include tb {
+    padding: 100rem 0;
+  }
+  @include sp {
+    padding: 80rem 0;
+  }
+  &::before {
+    content: '';
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 60%;
+    transform: translate(-50%, 5px);
+    z-index: -1;
+    width: 0;
+    height: 0;
+    @include sp {
+      border-bottom: 30rem solid #640000;
+      border-left: 30rem solid transparent;
+      border-right: 30rem solid transparent;
+      display: block;
+    }
   }
   &::after {
     content: '';
@@ -52,13 +104,25 @@
     height: 100%;
     background: #640000;
     z-index: -1;
+    @include sp {
+      width: 100%;
+      height: 60%;
+      top: auto;
+      bottom: 0;
+    }
   }
   .l-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include sp {
+      flex-direction: column;
+    }
   }
   &-left {
+    @include sp {
+      margin-bottom: 130rem;
+    }
     svg {
       width: 645px;
       height: 645px;
@@ -66,12 +130,22 @@
         width: 645rem;
         height: 645rem;
       }
+      @include sp {
+        width: 350rem;
+        height: 350rem;
+      }
     }
   }
   &-right {
     max-width: 570px;
     @include pc {
       max-width: 570rem;
+    }
+    @include tb {
+      max-width: 650rem;
+    }
+    @include sp {
+      max-width: 100%;
     }
     ul {
       li {
@@ -81,6 +155,13 @@
         padding: 50px 20px;
         @include pc {
           padding: 50rem 20rem;
+        }
+        @include tb {
+          flex-direction: column;
+          align-items: start;
+        }
+        @include sp {
+          padding: 30rem 20rem;
         }
         p {
           color: var(--g-color-white);
@@ -95,9 +176,50 @@
         text-wrap: nowrap;
         font-size: 16px;
         padding-right: 50px;
+        color: #CECECE;
         @include pc {
           font-size: 16rem;
           padding-right: 50rem;
+        }
+        @include tb {
+          font-size: 26rem;
+          padding-right: 60rem;
+          margin-bottom: 15rem;
+        }
+        @include sp {
+          font-size: 16rem;
+          padding-right: 0;
+        }
+      }
+    }
+    &-content {
+      p {
+        letter-spacing: 0.05em;
+      }
+      &-ttl {
+        font-size: 20px;
+        margin-bottom: 16px;
+        @include pc {
+          font-size: 20rem;
+          margin-bottom: 16rem;
+        }
+        @include tb {
+          font-size: 30rem;
+        }
+        @include sp {
+          font-size: 16rem;
+        }
+      }
+      &-txt {
+        font-size: 16px;
+        @include pc {
+          font-size: 16rem;
+        }
+        @include tb {
+          font-size: 26rem;
+        }
+        @include sp {
+          font-size: 12rem;
         }
       }
     }
@@ -110,10 +232,16 @@
   @include pc {
     padding: 150rem 0 180rem;
   }
+  @include sp {
+    padding: 80rem 0;
+  }
   &-ttl {
     margin-bottom: 140px;
     @include pc {
       margin-bottom: 140rem;
+    }
+    @include sp {
+      margin-bottom: 40rem;
     }
     p {
       text-align: center;
@@ -122,6 +250,12 @@
       color: var(--g-color-white);
       @include pc {
         font-size: 24rem;
+      }
+      @include tb {
+        font-size: 34rem;
+      }
+      @include sp {
+        font-size: 16rem;
       }
     }
   }
@@ -132,6 +266,14 @@
       @include pc {
         height: 514rem;
       }
+      @include sp {
+        height: 515rem;
+      }
+    }
+    img {
+      @include sp {
+        width: 100%;
+      }
     }
   }
 }
@@ -141,15 +283,29 @@
   @include pc {
     padding: 160rem 0 280rem;
   }
+  @include sp {
+    padding: 80rem 0 250rem;
+  }
   &-ttl {
     p {
       color: var(--g-color-white);
       font-size: 24px;
       text-align: center;
       margin-bottom: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
       @include pc {
         font-size: 24rem;
         margin-bottom: 150rem;
+      }
+      @include tb {
+        font-size: 34rem;
+      }
+      @include sp {
+        font-size: 20rem;
+        margin-bottom: 60rem;
       }
       svg {
         width: 178px;
@@ -157,6 +313,14 @@
         @include pc {
           width: 178rem;
           height: 20rem;
+        }
+        @include tb {
+          width: 250rem;
+          height: 26rem;
+        }
+        @include sp {
+          width: 142rem;
+          height: 18rem;
         }
       }
     }
@@ -171,17 +335,483 @@
         width: 1029rem;
         height: 446rem;
       }
+      @include tb {
+        width: 80%;
+        height: 500rem;
+      }
+      @include sp {
+        width: 100%;
+        height: 257rem;
+      }
+    }
+    img {
+      width: 100%;
     }
   }
 }
 
 .sec-service-plan {
+  overflow: unset;
+  background: #000;
+  padding-bottom: 120px;
+  @include pc {
+    padding-bottom: 120rem;
+  }
+  @include sp {
+    padding-bottom: 60rem;
+  }
   &-head {
+    transform: translateY(-50%);
     &-ttl {
       p {
         text-align: center;
         font-size: 15px;
         letter-spacing: 0.1em;
+        padding: 25px 0;
+        color: var(--g-color-white);
+        background: #000;
+        @include pc {
+          font-size: 15rem;
+          padding: 25rem 0;
+        }
+        @include tb {
+          font-size: 25rem;
+        }
+        @include sp {
+          font-size: 14rem;
+          padding: 12rem 0;
+        }
+      }
+    }
+    &-content {
+      background: var(--g-color-white);
+      padding: 25px 30px;
+      display: flex;
+      align-items: center;
+      @include pc {
+        padding: 25rem 30rem;
+      }
+      @include sp {
+        padding: 0 20rem;
+        flex-direction: column;
+      }
+    }
+    &__elem {
+      width: 50%;
+      padding: 15px 40px;
+      @include pc {
+        padding: 15rem 40rem;
+      }
+      @include sp {
+        width: 100%;
+        padding: 25rem 0;
+      }
+      &:nth-child(1) {
+        border-right: 1px solid #CECECE;
+        @include sp {
+          border-right: unset;
+          border-bottom: 1px solid #CECECE;
+        }
+      }
+      &-ttl {
+        p {
+          position: relative;
+          font-size: 20px;
+          letter-spacing: 0.05em;
+          margin-bottom: 16px;
+          color: var(--g-color-red);
+          padding-left: 16px;
+          @include pc {
+            font-size: 20rem;
+            margin-bottom: 16rem;
+            padding-left: 16rem;
+          }
+          @include tb {
+            font-size: 30rem;
+            margin-bottom: 16rem;
+            padding-left: 24rem;
+          }
+          @include sp {
+            font-size: 14rem;
+            padding-left: 12rem;
+            margin-bottom: 14rem;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--g-color-red);
+            @include pc {
+              width: 8rem;
+              height: 8rem;
+            }
+            @include tb {
+              width: 12rem;
+              height: 12rem;
+            }
+            @include sp {
+              width: 8rem;
+              height: 8rem;
+            }
+          }
+        }
+      }
+      &-txt {
+        p {
+          font-size: 16px;
+          line-height: 1.5;
+          letter-spacing: 0.05em;
+          color: var(--g-color-black);
+          @include pc {
+            font-size: 16rem;
+          }
+          @include tb {
+            font-size: 26rem;
+          }
+          @include sp {
+            font-size: 12rem;
+          }
+        }
+      }
+    }
+  }
+  &-ttl {
+    text-align: center;
+    margin-bottom: 58px;
+    @include pc {
+      margin-bottom: 58rem;
+    }
+    @include sp {
+      margin-bottom: 40rem;
+    }
+    p {
+      font-size: 32px;
+      margin-bottom: 8px;
+      color: var(--g-color-white);
+      font-weight: bold;
+      @include pc {
+        font-size: 32rem;
+        margin-bottom: 8rem;
+      }
+      @include tb {
+        font-size: 42rem;
+        margin-bottom: 12rem;
+      }
+      @include sp {
+        font-size: 24rem;
+        margin-bottom: 6rem;
+      }
+    }
+    span {
+      display: block;
+      font-size: 16px;
+      color: var(--g-color-white);
+      letter-spacing: 0.05em;
+      @include pc {
+        font-size: 16rem;
+      }
+      @include tb {
+        font-size: 26rem;
+      }
+      @include sp {
+        margin-bottom: 12rem;
+      }
+    }
+  }
+
+  .container {
+    & > p {
+      text-align: center;
+      color: var(--g-color-white);
+      font-size: 20px;
+      letter-spacing: 0.05em;
+      margin-bottom: 80px;
+      @include pc {
+        font-size: 20rem;
+        margin-bottom: 80rem;
+      }
+      @include tb {
+        font-size: 30rem;
+        padding: 0 100rem;
+      }
+      @include sp {
+        text-align: left;
+        font-size: 12rem;
+        margin-bottom: 54rem;
+        padding: 0 20rem;
+      }
+    }
+  }
+
+  &-tb {
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 60px;
+    @include pc {
+      margin-bottom: 60rem;
+    }
+    svg {
+      width: 100%;
+      @include sp {
+        width: 470rem;
+        height: 316rem;
+      }
+    }
+  }
+
+  &-point {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include sp {
+      flex-direction: column;
+      align-items: start;
+    }
+    &__elem {
+      width: 50%;
+      padding: 50px 0;
+      @include pc {
+        padding: 50rem 0;
+      }
+      @include sp {
+        width: 100%;
+        padding: 30rem 20rem;
+      }
+      &:nth-child(1) {
+        border-right: 1px solid #CECECE;
+        @include sp {
+          border-right: unset;
+          border-bottom: 1px solid #CECECE;
+        }
+      }
+      p {
+        font-size: 21px;
+        color: var(--g-color-white);
+        font-size: 16px;
+        text-align: center;
+        padding: 0 30px;
+        @include pc {
+          font-size: 21rem;
+          padding: 0 30rem;
+        }
+        @include tb {
+          text-align: left;
+          font-size: 31rem;
+        }
+        @include sp {
+          padding: 0;
+          font-size: 16rem;
+        }
+        span {
+          color: #CECECE;
+          display: inline-block;
+          margin-right: 50px;
+          @include pc {
+            margin-right: 50rem;
+          }
+          @include tb {
+            display: block;
+            margin-right: 0;
+            margin-bottom: 15rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sec-service-flow {
+  padding: 200px 0;
+  background: #000;
+  @include pc {
+    padding: 200rem 0;
+  }
+  @include sp {
+    padding: 80rem 0 100rem;
+  }
+  &-ttl {
+    text-align: center;
+    margin-bottom: 100px;
+    @include pc {
+      margin-bottom: 100rem;
+    }
+    p {
+      font-size: 32px;
+      margin-bottom: 8px;
+      color: var(--g-color-white);
+      font-weight: bold;
+      @include pc {
+        font-size: 32rem;
+        margin-bottom: 8rem;
+      }
+      @include tb {
+        font-size: 42rem;
+      }
+      @include sp {
+        font-size: 24rem;
+      }
+    }
+    span {
+      display: block;
+      font-size: 16px;
+      color: var(--g-color-white);
+      letter-spacing: 0.05em;
+      @include pc {
+        font-size: 16rem;
+      }
+      @include tb {
+        font-size: 26rem;
+      }
+      @include sp {
+        font-size: 12rem;
+      }
+    }
+  }
+
+  &-content__wrap {
+    width: 100%;
+    overflow: auto;
+    display: -webkit-box;
+  }
+
+  &-content {
+    width: max-content;
+  }
+
+  &-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 65px;
+    @include pc {
+      margin-bottom: 65rem;
+    }
+    @include sp {
+      margin-bottom: 30rem;
+    }
+    li {
+      background: rgba($color: #fff, $alpha: 0.05);
+      border-radius: 50%;
+      border: 2px solid var(--g-color-white);
+      width: 260px;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      @include pc {
+        width: 260rem;
+        height: 260rem;
+      }
+      @include tb {
+        width: 320rem;
+        height: 320rem;
+      }
+      @include sp {
+        width: 189rem;
+        height: 189rem;
+      }
+      &:not(:last-child) {
+        margin-right: 58px;
+        @include pc {
+          margin-right: 30rem;
+        }
+        @include tb {
+          margin-right: 50rem;
+        }
+        @include sp {
+          margin-right: 40rem;
+        }
+        &::after {
+          content: '';
+          width: 140px;
+          height: 7px;
+          position: absolute;
+          background: url(../img/flow-deco.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          right: 0;
+          top: 50%;
+          transform: translate(100px, -50%);
+          @include pc {
+            width: 110rem;
+            height: 7rem;
+            transform: translate(70rem, -50%);
+          }
+          @include tb {
+            width: 150rem;
+            height: 7rem;
+            transform: translate(100rem, -50%);
+          }
+          @include sp {
+            width: 100rem;
+            height: 5rem;
+            transform: translate(70rem, -50%);
+          }
+        }
+      }
+      span {
+        display: block;
+        color: #CECECE;
+        font-size: 14px;
+        margin-bottom: 12px;
+        @include pc {
+          font-size: 14rem;
+          margin-bottom: 12rem;
+        }
+        @include tb {
+          font-size: 24rem;
+        }
+        @include sp {
+          font-size: 12rem;
+        }
+      }
+      p {
+        color: var(--g-color-white);
+        font-size: 18px;
+        letter-spacing: 0.05em;
+        @include pc {
+          font-size: 18rem;
+        }
+        @include tb {
+          font-size: 24rem;
+        }
+        @include sp {
+          font-size: 18rem;
+        }
+      }
+    }
+  }
+
+  &-txt {
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    li {
+      font-size: 14px;
+      color: var(--g-color-white);
+      line-height: 1.5;
+      width: 260px;
+      @include pc {
+        width: 260rem;
+        font-size: 14rem;
+      }
+      @include tb {
+        width: 320rem;
+        font-size: 24rem;
+      }
+      @include sp {
+        width: 189rem;
+        font-size: 10rem;
       }
     }
   }

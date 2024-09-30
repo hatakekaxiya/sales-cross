@@ -1,0 +1,184 @@
+.contact-form {
+  max-width: 800px;
+  width: 100%;
+  margin-left: auto;
+  &__elem {
+    margin-bottom: 33px;
+    &-label {
+      label {
+        margin-bottom: 8px;
+        font-size: 16px;
+        font-family: $font-noto;
+        color: var(--g-color-black);
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        @include sp {
+          font-size: 12rem;
+        }
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          line-height: 1;
+          margin-left: 10px;
+          font-size: 12px;
+          color: var(--g-color-white);
+          border-radius: 50px;
+          padding: 5px 20px;
+          background: var(--g-color-red);
+          @include sp {
+            font-size: 10rem;
+            padding: 2rem 12rem;
+            margin-left: 10rem;
+          }
+          &.red-txt {
+            background-color: unset;
+            display: inline;
+            font-size: 16px;
+            color: var(--g-color-red);
+            margin-left: 0;
+            padding: 0;
+            @include sp {
+              font-size: 12rem;
+            }
+          }
+        }
+      }
+    }
+    &-inp {
+      input,
+      select,
+      textarea {
+        width: 100%;
+        min-height: 48px;
+        border: 1px solid #CED2D6;
+        outline: unset;
+        border-radius: 8px;
+        font-size: 16px;
+        padding: 10px;
+        color: var(--g-color-black);
+        font-family: $font-noto;
+      }
+      textarea {
+        height: 270px;
+      }
+    }
+  }
+
+  &-privacy {
+    border-radius: 8px;
+    background: #EFEFEF;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 484px;
+    margin: auto;
+    margin-bottom: 50px;
+    @include sp {
+      width: 100%;
+    }
+    input {
+      width: 16px;
+      height: 16px;
+      border: 1px solid #990001;
+      margin-right: 16px;
+      @include sp {
+        margin-right: 16rem;
+      }
+    }
+    span {
+      font-size: 16px;
+      color: var(--g-color-black);
+      @include sp {
+        font-size: 12rem;
+      }
+      a {
+        color: var(--g-color-red);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &-submit {
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 37px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      margin: auto;
+      color: var(--g-color-white);
+      font-family: $font-noto;
+      letter-spacing: 0.1em;
+      font-weight: 400;
+      background-color: #990001;
+      border-radius: 100px;
+      width: 290px;
+      height: 64px;
+      font-size: 16px;
+      position: relative;
+      @include pc {
+        padding-left: 37rem;
+        width: 290rem;
+        height: 64rem;
+        font-size: 16rem;
+      }
+      @include tb {
+        padding-left: 50rem;
+        width: 430rem;
+        height: 84rem;
+        font-size: 26rem;
+      }
+      @include sp {
+        padding-left: 30rem;
+        width: 240rem;
+        height: 53rem;
+        font-size: 12rem;
+      }
+      &::after {
+        content: '';
+        background: url(../img/a-btn_arrow.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+        @include pc {
+          width: 32rem;
+          height: 32rem;
+          right: 24rem;
+        }
+        @include tb {
+          width: 46rem;
+          height: 46rem;
+          right: 24rem;
+        }
+        @include sp {
+          width: 28rem;
+          height: 28rem;
+          right: 20rem;
+        }
+      }
+    }
+  }
+}
+
+.contact-main {
+  padding-bottom: 180px;
+  @include pc {
+    padding-bottom: 180rem;
+  }
+  @include sp {
+    padding-bottom: 120rem;
+  }
+}

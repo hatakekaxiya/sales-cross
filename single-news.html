@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://use.typekit.net/uuy7iff.css">
   <link rel="stylesheet" href="./assets/scss/style.css" />
 </head>
-<body class="black-page">
+<body>
   <!--div class="loading">
     <div class="loading-content">
       <div class="loading-txt">
@@ -86,222 +86,35 @@
       </div>
     </div>
   </header>
-
   <main class="main lower-page">
-    <section class="page-fv">
-      <div class="l-container">
-        <div class="page-ttl _white">
-          <h2>JOB</h2>
-          <span>注目求人</span>
+    <div class="s-container">
+      <div class="single-post news-single">
+        <div class="news-single-head">
+          <span><?php echo get_the_date('Y.m.d'); ?></span>
+          <p><?php the_title();?></p>
+        </div>
+
+        <div class="single-post-main">
+          <div class="single-post-content">
+            <h2>H2タイトル</h2>
+            <h3>H3タイトル</h3>
+            <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が…</p>
+            <h4>H4タイトル</h4>
+            <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が…</p>
+            <h2>H2タイトル</h2>
+            <h3>H3タイトル</h3>
+            <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が…</p>
+            <h4>H4タイトル</h4>
+            <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が…</p>
+          </div>
+
+          <div class="a-btn">
+            <a href="<?php echo home_url('/news')?>">お知らせ一覧に戻る</a>
+          </div>
         </div>
       </div>
-    </section>
-
-    <section class="section sec-job-page-content">
-      <div class="container">
-        <ul class="job-items">
-          <li class="job-item">
-            <a href="">
-              <div class="job-item-txt">
-                <div class="job-item-txt-ttl">
-                  <p>案件タイトル</p>
-                  <span>株式会社会社名</span>
-                </div>
-
-                <div class="job-item-txt-detail">
-                  <div class="job-item-txt-detail-price">
-                    <img src="./assets/img/price-ico.png" alt="">
-                    <p>000万円〜0000万円</p>
-                  </div>
-
-                  <div class="job-item-txt-detail-location">
-                    <img src="./assets/img/map-ico.png" alt="">
-                    <p>東京都</p>
-                  </div>
-                </div>
-
-                <div class="job-item-txt-ctg">
-                  <p>#業種カテゴリー</p>
-                </div>
-
-                <span class="new-product">New</span>
-              </div>
-
-              <div class="job-item-img">
-                <img src="./assets/img/dummy-logo.png" alt="">
-              </div>
-            </a>
-          </li>
-          
-          <li class="job-item">
-            <a href="">
-              <div class="job-item-txt">
-                <div class="job-item-txt-ttl">
-                  <p>案件タイトル</p>
-                  <span>株式会社会社名</span>
-                </div>
-
-                <div class="job-item-txt-detail">
-                  <div class="job-item-txt-detail-price">
-                    <img src="./assets/img/price-ico.png" alt="">
-                    <p>000万円〜0000万円</p>
-                  </div>
-
-                  <div class="job-item-txt-detail-location">
-                    <img src="./assets/img/map-ico.png" alt="">
-                    <p>東京都</p>
-                  </div>
-                </div>
-
-                <div class="job-item-txt-ctg">
-                  <p>#業種カテゴリー</p>
-                </div>
-
-                <span class="new-product">New</span>
-              </div>
-
-              <div class="job-item-img">
-                <img src="./assets/img/dummy-logo.png" alt="">
-              </div>
-            </a>
-          </li>
-
-          <li class="job-item">
-            <a href="">
-              <div class="job-item-txt">
-                <div class="job-item-txt-ttl">
-                  <p>案件タイトル</p>
-                  <span>株式会社会社名</span>
-                </div>
-
-                <div class="job-item-txt-detail">
-                  <div class="job-item-txt-detail-price">
-                    <img src="./assets/img/price-ico.png" alt="">
-                    <p>000万円〜0000万円</p>
-                  </div>
-
-                  <div class="job-item-txt-detail-location">
-                    <img src="./assets/img/map-ico.png" alt="">
-                    <p>東京都</p>
-                  </div>
-                </div>
-
-                <div class="job-item-txt-ctg">
-                  <p>#業種カテゴリー</p>
-                </div>
-
-                <span class="new-product">New</span>
-              </div>
-
-              <div class="job-item-img">
-                <img src="./assets/img/dummy-logo.png" alt="">
-              </div>
-            </a>
-          </li>
-
-          <li class="job-item">
-            <a href="">
-              <div class="job-item-txt">
-                <div class="job-item-txt-ttl">
-                  <p>案件タイトル</p>
-                  <span>株式会社会社名</span>
-                </div>
-
-                <div class="job-item-txt-detail">
-                  <div class="job-item-txt-detail-price">
-                    <img src="./assets/img/price-ico.png" alt="">
-                    <p>000万円〜0000万円</p>
-                  </div>
-
-                  <div class="job-item-txt-detail-location">
-                    <img src="./assets/img/map-ico.png" alt="">
-                    <p>東京都</p>
-                  </div>
-                </div>
-
-                <div class="job-item-txt-ctg">
-                  <p>#業種カテゴリー</p>
-                </div>
-
-                <span class="new-product">New</span>
-              </div>
-
-              <div class="job-item-img">
-                <img src="./assets/img/dummy-logo.png" alt="">
-              </div>
-            </a>
-          </li>
-
-          <li class="job-item">
-            <a href="">
-              <div class="job-item-txt">
-                <div class="job-item-txt-ttl">
-                  <p>案件タイトル</p>
-                  <span>株式会社会社名</span>
-                </div>
-
-                <div class="job-item-txt-detail">
-                  <div class="job-item-txt-detail-price">
-                    <img src="./assets/img/price-ico.png" alt="">
-                    <p>000万円〜0000万円</p>
-                  </div>
-
-                  <div class="job-item-txt-detail-location">
-                    <img src="./assets/img/map-ico.png" alt="">
-                    <p>東京都</p>
-                  </div>
-                </div>
-
-                <div class="job-item-txt-ctg">
-                  <p>#業種カテゴリー</p>
-                </div>
-
-                <span class="new-product">New</span>
-              </div>
-
-              <div class="job-item-img">
-                <img src="./assets/img/dummy-logo.png" alt="">
-              </div>
-            </a>
-          </li>
-
-          <li class="job-item">
-            <a href="">
-              <div class="job-item-txt">
-                <div class="job-item-txt-ttl">
-                  <p>案件タイトル</p>
-                  <span>株式会社会社名</span>
-                </div>
-
-                <div class="job-item-txt-detail">
-                  <div class="job-item-txt-detail-price">
-                    <img src="./assets/img/price-ico.png" alt="">
-                    <p>000万円〜0000万円</p>
-                  </div>
-
-                  <div class="job-item-txt-detail-location">
-                    <img src="./assets/img/map-ico.png" alt="">
-                    <p>東京都</p>
-                  </div>
-                </div>
-
-                <div class="job-item-txt-ctg">
-                  <p>#業種カテゴリー</p>
-                </div>
-
-                <span class="new-product">New</span>
-              </div>
-
-              <div class="job-item-img">
-                <img src="./assets/img/dummy-logo.png" alt="">
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+    </div>
   </main>
-
 
   <footer class="footer">
     <div class="container">
