@@ -358,14 +358,28 @@
   }
 
   .sec-study {
+    background: var(--g-color-white);
     padding: 80px 0 100px;
+    overflow: unset;
     @include pc {
       padding: 80rem 0 100rem;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      background: var(--g-color-white);
+      height: 500px;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transform: translateY(-100%);
     }
     &-ttl {
       display: flex;
       justify-content: space-between;
       align-items: end;
+      margin-bottom: 120px;
       .a-btn {
         display: block;
         @include sp {
@@ -392,6 +406,7 @@
   }
 
   .sec-news {
+    background: var(--g-color-white);
     padding: 120px 0;
     @include pc {
       padding: 120rem 0;

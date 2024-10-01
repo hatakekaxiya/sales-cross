@@ -960,3 +960,230 @@
     }
   }
 }
+
+.case-study-items {
+  display: flex;
+  align-items: start;
+  justify-content: left;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+  @include pc {
+    margin: 0 -20rem;
+  }
+  @include sp {
+    margin: 0;
+  }
+}
+
+.case-study-item {
+  margin: 0 20px;
+  width: 405px;
+  margin-bottom: 120px;
+  @include pc {
+    margin: 0 20rem;
+    width: 405rem;
+    margin-bottom: 120rem;
+  }
+  @include sp {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 25rem;
+  }
+  &-img {
+    overflow: hidden;
+    border-radius: 16px;
+    width: 100%;
+    height: 252px;
+    margin-bottom: 35px;
+    @include pc {
+      margin-bottom: 35rem;
+      border-radius: 16rem;
+      height: 252rem;
+    }
+    @include sp {
+      margin-bottom: 0;
+      border-radius: 5rem;
+      max-width: 115rem;
+      height: 115rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-txt {
+    @include sp {
+      padding-left: 14rem;
+    }
+    &-date {
+      span {
+        display: block;
+        margin-bottom: 15px;
+        font-family: $font-noto;
+        letter-spacing: 0.1em;
+        font-size: 11px;
+        color: #BCBCBC;
+        @include pc {
+          font-size: 11rem;
+          margin-bottom: 15rem;
+        }
+        @include sp {
+          font-size: 10rem;
+          margin-bottom: 12rem;
+        }
+      }
+    }
+    &-ttl {
+      p {
+        font-family: $font-noto;
+        font-size: 16px;
+        color: var(--g-color-black);
+        font-weight: bold;
+        margin-bottom: 24px;
+        line-height: 1.5;
+        @include pc {
+          margin-bottom: 24rem;
+          font-size: 16rem;
+        }
+        @include sp {
+          margin-bottom: 10rem;
+          font-size: 12rem;
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+    &-company {
+      span {
+        display: block;
+        position: relative;
+        font-family: $font-noto;
+        letter-spacing: 0.1em;
+        font-size: 15px;
+        padding-left: 14px;
+        color: var(--g-color-black);
+        @include pc {
+          font-size: 15rem;
+          padding-left: 14rem;
+        }
+        @include sp {
+          font-size: 10rem;
+          letter-spacing: 0.05em;
+          padding-left: 8rem;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: var(--g-color-red);
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          @include pc {
+            width: 8rem;
+            height: 8rem;
+          }
+          @include sp {
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+      }
+    }
+  }
+  &:nth-child(1) {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    .case-study-item-img {
+      max-width: 540px;
+      height: 340px;
+      @include pc {
+        max-width: 540rem;
+        height: 340rem;
+      }
+      @include sp {
+        max-width: 115rem;
+        height: 115rem;
+      }
+    }
+    .case-study-item-txt {
+      padding-left: 45px;
+      @include pc {
+        padding-left: 45rem;
+      }
+      @include sp {
+        padding-left: 14rem;
+      }
+      &-date {
+        span {
+          margin-bottom: 24px;
+          font-size: 16px;
+          @include pc {
+            font-size: 16rem;
+            margin-bottom: 24rem;
+          }
+          @include sp {
+            font-size: 10rem;
+            margin-bottom: 12rem;
+          }
+        }
+      }
+      &-ttl {
+        p {
+          font-size: 20px;
+          margin-bottom: 30px;
+          @include pc {
+            margin-bottom: 30rem;
+            font-size: 20rem;
+          }
+          @include sp {
+            margin-bottom: 10rem;
+            font-size: 12rem;
+            letter-spacing: 0.05em;
+          }
+        }
+      }
+      &-company {
+        span {
+          font-size: 20px;
+          padding-left: 21px;
+          @include pc {
+            font-size: 20rem;
+            padding-left: 21rem;
+          }
+          @include sp {
+            font-size: 10rem;
+            letter-spacing: 0.05em;
+            padding-left: 8rem;
+          }
+          &::after {
+            width: 12px;
+            height: 12px;
+            @include pc {
+              width: 12rem;
+              height: 12rem;
+            }
+            @include sp {
+              width: 4rem;
+              height: 4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.case-study-content {
+  padding-bottom: 120px;
+  @include pc {
+    padding-bottom: 120rem;
+  }
+}
